@@ -1,0 +1,48 @@
+date : '20230320'
+
+module:
+  data_preprocess : False
+  run_model : True
+
+model:
+  leader_follower_max_time : 60
+  show_shift_time : 30
+  time_shift : 1
+  independent_threshold : 0.7
+  companion_threshold : 0.03
+
+
+savgol:
+  window_length : 41
+  polyorder : 4
+
+sniffer_list :
+  - sniffer_zero
+  - sniffer_one
+  - sniffer_two
+  - sniffer_three
+  - sniffer_four
+  - sniffer_five
+  - sniffer_six
+
+
+mobile_list :
+  u19e : '0000f22e-0000-1000-8000-00805f9b34fb'
+  a42 : '0000ccb5-0000-1000-8000-00805f9b34fb'
+  a51 : '00007dd1-0000-1000-8000-00805f9b34fb'
+  v4445 : '0000dd9b-0000-1000-8000-00805f9b34fb'
+
+relation :
+  - [0, 'v4445', 'a42']
+  - [1, 'u19e', 'a42']
+  - [1, 'v4445', 'u19e']
+  - [2, 'a51', 'u19e']
+  - [2, 'a51', 'a42']
+  - [2, 'a51', 'v4445']
+
+
+start_time :
+  - "16:18:00"
+
+end_time :
+  - "16:28:00"
